@@ -1,0 +1,11 @@
+https://leetcode.com/problems/list-the-products-ordered-in-a-period/description/
+
+# Write your MySQL query statement below
+Select p.product_name, SUM(o.unit) as unit
+FROM Orders o
+Left Join Products p
+ON o.product_id = p.product_id
+Where o.order_date between  '2020-02-01' and '2020-02-29'
+Group By o.product_id
+Having unit >= 100
+

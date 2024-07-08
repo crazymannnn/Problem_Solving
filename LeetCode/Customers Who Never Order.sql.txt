@@ -1,0 +1,7 @@
+https://leetcode.com/problems/customers-who-never-order/description/
+
+SELECT Customers.name AS Customers
+FROM Orders
+RIGHT JOIN Customers
+ON Customers.id = Orders.customerId
+WHERE Orders.id IS NULL

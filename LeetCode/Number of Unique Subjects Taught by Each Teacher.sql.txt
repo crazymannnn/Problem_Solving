@@ -1,0 +1,6 @@
+https://leetcode.com/problems/number-of-unique-subjects-taught-by-each-teacher/description/
+
+# Write your MySQL query statement below
+Select teacher_id, Count(distinct subject_id) as cnt
+From Teacher
+Group By teacher_id

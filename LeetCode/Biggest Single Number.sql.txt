@@ -1,0 +1,8 @@
+https://leetcode.com/problems/biggest-single-number/description/
+
+# Write your MySQL query statement below
+SELECT IF (COUNT(num)>1,null,num) as num
+FROM MyNumbers
+GROUP BY num
+ORDER BY (num) DESC
+LIMIT 1

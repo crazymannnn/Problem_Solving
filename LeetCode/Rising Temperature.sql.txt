@@ -1,0 +1,6 @@
+https://leetcode.com/problems/rising-temperature/description/
+
+Select p.id
+from Weather p, Weather q
+#where p.recordDate - q.recordDate = 1 and p.temperature > q.temperature
+where dateDiff(p.recordDate, q.recordDate) = 1 and p.temperature > q.temperature

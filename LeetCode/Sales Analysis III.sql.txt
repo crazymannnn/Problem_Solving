@@ -1,0 +1,10 @@
+https://leetcode.com/problems/sales-analysis-iii/description/
+
+
+# Write your MySQL query statement below
+Select q.product_id, q.product_name
+From Product q
+Join Sales p
+On q.product_id = p.product_id
+Group By product_id
+Having min(p.sale_date) >= '2019-01-01' and max(p.sale_date) <= '2019-03-31';

@@ -1,0 +1,7 @@
+https://leetcode.com/problems/find-followers-count/description/
+
+# Write your MySQL query statement below
+Select user_id, COUNT(follower_id) as followers_count
+From Followers
+Group By user_id
+Order By (user_id)

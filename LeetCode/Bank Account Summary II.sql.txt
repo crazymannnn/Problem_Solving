@@ -1,0 +1,9 @@
+https://leetcode.com/problems/bank-account-summary-ii/description/
+
+# Write your MySQL query statement below
+Select q.name, SUM(amount) as balance
+From Transactions p
+Left Join Users q
+On p.account = q.account
+Group By p.account
+Having SUM(amount) > 10000
